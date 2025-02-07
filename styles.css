@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after,
+{
+box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 96vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid orange;
+    flex: 1;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    border: 2px solid green;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.background1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    background-image: url('img/church1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.headercontainer {
+    background-color: rgba(255, 255, 255, 0.76);
+    width: fit-content;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 50px white;
+}
+
+.monogram {
+    width: 100px;
+}
+
+.photoscontainer {
+    background-color: rgba(255, 255, 255, 0.76);
+    flex: 1;
+}
+
+.photosbuttondiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.yearlistcontainer {
+    display: flex;
+    flex-direction: crow;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hide {
+    display: none;
+}
