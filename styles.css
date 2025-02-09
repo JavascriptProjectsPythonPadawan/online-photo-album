@@ -37,6 +37,7 @@ body {
     object-fit: cover;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
+    pointer-events: none;
 }
 
 .backgroundpic {
@@ -47,6 +48,7 @@ body {
     object-fit: cover;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
+    pointer-events: none;
 }
 
 main {
@@ -216,8 +218,8 @@ button:hover {
         border-top: 2px solid black;
         border-bottom: 2px solid black;
         box-shadow: 0 0 200px rgba(10, 71, 10, 0.5);
-        min-height: 68vh;
-        max-height: 68vh;
+        min-height: 60vh;
+        max-height: 60vh;
     }
 
     footer {
