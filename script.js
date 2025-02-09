@@ -65,6 +65,7 @@ const allYearButtons = document.querySelectorAll('#yearlistcontainer button');
 const photosContainer = document.querySelector('#photoscontainer');
 const backgroundPic = document.querySelector('#backgroundpic');
 const bodyOfDocument = document.querySelector('body');
+const imagesInsidePhotosContainer = document.querySelectorAll('#photoscontainer img');
 
 const showAllYearButtons = () => {
     yearListContainer.classList.remove('hide');
@@ -83,14 +84,6 @@ yearhomeButton.addEventListener('click', hideYearsShowPhotosButton);
 photosButton.addEventListener('click', showAllYearButtons);
 photosButton.addEventListener('click', () => { photosContainer.innerHTML = '' });
 photosButton.addEventListener('click', () => setBackgroundURL("img/church1.jpg"));
-
-// yearbeforeusButton.addEventListener('click', () => { photosContainer.innerHTML = '' });
-// yearbeforeusButton.addEventListener('click', () => insertPicsToContainer(beforeusPics));
-// yearbeforeusButton.addEventListener('click', () => setBackgroundURL("img/church2.jpg"));
-// year2015Button.addEventListener('click', () => { photosContainer.innerHTML = '' });
-// year2015Button.addEventListener('click', () => insertPicsToContainer(year2015Pics));
-// year2015Button.addEventListener('click', () => setBackgroundURL("img/church3.jpg"));
-
 
 const setBackgroundURL = (imageLink) => {
     const body = document.querySelector('body');
@@ -149,31 +142,6 @@ yearButtonFunction(year2023Button, year2023Pics, "img/church3.jpg");
 yearButtonFunction(year2024Button, year2024Pics, "img/church3.jpg");
 yearButtonFunction(year2025Button, year2025Pics, "img/church3.jpg");
 
-// window.addEventListener('load', () => {
-//     document.body.classList.add('fade-in');
-// });
-
-/* <style>
-body {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-body.fade-in {
-    opacity: 1;
-}
-</style>
-</head>
-<body>
-<button id="fadeButton">Click me to fade in</button>
-
-<script>
-const fadeButton = document.getElementById('fadeButton');
-fadeButton.addEventListener('click', () => {
-    document.body.classList.add('fade-in');
-});
-
-window.addEventListener('load', () => {
-    document.body.classList.add('fade-in');
-});
-</script> */
+imagesInsidePhotosContainer.addEventListener('click', () => {
+    photosContainer.innerHTML = '';
+})
