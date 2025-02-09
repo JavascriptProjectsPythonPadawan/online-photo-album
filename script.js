@@ -95,10 +95,17 @@ const getFinalImageLinks = (initialLinks) => {
 const insertPicsToContainer = (initialLinks) => {
     const finalImageLinks = getFinalImageLinks(initialLinks);
     for (let i = 0; i < initialLinks.length; i++) {
+        const picAndNumberContainer = document.createElement('div');
+        const picNumber = document.createElement('p');
+        picNumber.textContent = `${i + 1}`;
+        picNumber.classList.add('picnumber');
         const imagePic = document.createElement('img');
         imagePic.src = finalImageLinks[i];
-        photosContainer.appendChild(imagePic);
+        picAndNumberContainer.appendChild(picNumber);
+        picAndNumberContainer.appendChild(imagePic);
         imagePic.style.animationDelay = `${i * 0.5}s`;
+        picNumber.style.animationDelay = `${i * 0.5}s`;
+        photosContainer.appendChild(picAndNumberContainer);
         // const imagePic = document.createElement('img');
         // const imageParagraph = document.createElement('p');
         // imagePic.src = finalImageLinks[i];
