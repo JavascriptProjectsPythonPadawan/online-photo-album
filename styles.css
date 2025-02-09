@@ -10,10 +10,13 @@ box-sizing: border-box;
     padding: 0;
 }
 
+
 body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -83,7 +86,7 @@ footer {
 
 .photoscontainer {
     /* flex: 1; */
-    border: 3px solid red;
+    /* border: 3px solid red; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
