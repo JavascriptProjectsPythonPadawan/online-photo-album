@@ -43,10 +43,12 @@ const year2022Button = document.querySelector('#year2022');
 const year2023Button = document.querySelector('#year2023');
 const year2024Button = document.querySelector('#year2024');
 const year2025Button = document.querySelector('#year2025');
+const yearhomeButton = document.querySelector('#yearhome');
 const photosButton = document.querySelector('#photosbutton');
 const yearListContainer = document.querySelector('#yearlistcontainer');
 const allYearButtons = document.querySelectorAll('#yearlistcontainer button');
 const photosContainer = document.querySelector('#photoscontainer');
+const backgroundPic = document.querySelector('#backgroundpic');
 
 const showAllYearButtons = () => {
     yearListContainer.classList.remove('hide');
@@ -60,42 +62,25 @@ const hideYearsShowPhotosButton = () => {
     photosButton.style.animation = 'fadeIn 1s ease-in-out forwards';
 };
 
-
-
+yearhomeButton.addEventListener('click', hideYearsShowPhotosButton);
 photosButton.addEventListener('click', showAllYearButtons);
 photosButton.addEventListener('click', () => { photosContainer.innerHTML = '' });
-photosButton.addEventListener('click', () => setBackgroundURL('church1'));
-yearbeforeusButton.addEventListener('click', hideYearsShowPhotosButton);
+photosButton.addEventListener('click', () => setBackgroundURL("img/church1.jpg"));
+yearbeforeusButton.addEventListener('click', () => { photosContainer.innerHTML = '' });
 yearbeforeusButton.addEventListener('click', () => insertPicsToContainer(beforeusPics));
-yearbeforeusButton.addEventListener('click', () => setBackgroundURL('church2'));
-year2015Button.addEventListener('click', hideYearsShowPhotosButton);
+yearbeforeusButton.addEventListener('click', () => setBackgroundURL("img/church2.jpg"));
+year2015Button.addEventListener('click', () => { photosContainer.innerHTML = '' });
 year2015Button.addEventListener('click', () => insertPicsToContainer(year2015Pics));
-year2016Button.addEventListener('click', hideYearsShowPhotosButton);
-year2017Button.addEventListener('click', hideYearsShowPhotosButton);
-year2018Button.addEventListener('click', hideYearsShowPhotosButton);
-year2019Button.addEventListener('click', hideYearsShowPhotosButton);
-year2020Button.addEventListener('click', hideYearsShowPhotosButton);
-year2021Button.addEventListener('click', hideYearsShowPhotosButton);
-year2022Button.addEventListener('click', hideYearsShowPhotosButton);
-year2023Button.addEventListener('click', hideYearsShowPhotosButton);
-year2024Button.addEventListener('click', hideYearsShowPhotosButton);
-year2025Button.addEventListener('click', hideYearsShowPhotosButton);
+year2015Button.addEventListener('click', () => setBackgroundURL("img/church3.jpg"));
 
 
-// for (let button of allYearButtons) {
-//     button.addEventListener('click', hideYearsShowPhotosButton)
-// };
-
-window.addEventListener('load', () => {
-    document.body.style.opacity = '1'; // Trigger the fade-in effect
-});
-
-const setBackgroundURL = (image) => {
+const setBackgroundURL = (imageLink) => {
     const body = document.querySelector('body');
     body.style.backgroundImage = '';
-    body.style.backgroundImage = `url(img/${image}.jpg)`;
-    body.style.opacity = '0';
-    body.style.animation = 'fadeIn 1s ease-in-out forwards';
+    backgroundPic.src = imageLink;
+    backgroundPic.classList.remove('backgroundpic');
+    backgroundPic.classList.remove('backgroundimage');
+    backgroundPic.classList.add('backgroundpic');
 };
 
 const getFinalImageLinks = (initialLinks) => {

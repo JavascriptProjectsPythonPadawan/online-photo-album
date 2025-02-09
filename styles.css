@@ -16,6 +16,36 @@ body {
     height: 100%;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.backgroundimage {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -50;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.backgroundpic {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -50;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -33,25 +63,6 @@ footer {
     justify-content: center;
 }
 
-/* .background1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: black;
-    background-image: url('img/church1.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: bottom;
-} */
-
-.background2 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: black;
-    background-image: url('img/church2.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
 
 
 .headercontainer {
@@ -155,7 +166,7 @@ button:focus {
     background-image: linear-gradient(rgb(106, 136, 109), rgb(7, 70, 7));
     border: 2px solid rgb(50, 50, 50);
     border-bottom: 5px solid rgb(50, 50, 50);
-    box-shadow: 0px 1px 6px 0px rgb(0, 0, 0);
+    box-shadow: 0px 0px 6px 0px rgb(0, 0, 0);
     transform: translate(0, -3px);
     cursor: pointer;
     transition: 0.2s;
