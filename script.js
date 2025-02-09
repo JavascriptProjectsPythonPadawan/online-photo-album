@@ -31,6 +31,21 @@ const year2015Pics = [
     "https://drive.google.com/file/d/1ggF7Q_tjotTzvFysGeZVWH1-j2o2LiK4/view?usp=drive_link",
 ];
 
+const year2016Pics = [
+    "https://drive.google.com/file/d/1AVEyHd2BkDPr2FRBQOuJ_PHhFJtIlhKD/view?usp=drive_link",
+    "https://drive.google.com/file/d/13q_bIPSHePYKqiorW2WYqwtenX8Tea3d/view?usp=drive_link",
+    "https://drive.google.com/file/d/1lMgopQYbj1o1ECEatZA3unV9MQZUMFYo/view?usp=drive_link",
+    "https://drive.google.com/file/d/1Cpo3wM1RoCFEBAsDfnl9eY_SNHcw9SLh/view?usp=drive_link",
+    "https://drive.google.com/file/d/1Gg0NDrVuBXoETUrJQyng_8bJjccn7rV8/view?usp=drive_link",
+    "https://drive.google.com/file/d/1DMPehNeKezcVuMbyDMkswJmK8cUeLRXu/view?usp=drive_link",
+    "https://drive.google.com/file/d/1UbKqLMS7wcjrJdHgEaMSptYar8xkRpsj/view?usp=drive_link",
+    "https://drive.google.com/file/d/1f8PbTgjAE7i6LxEaM9J4jZP4GBjhhgbX/view?usp=drive_link",
+    "https://drive.google.com/file/d/1vtr6bNMbeAx94WFmUfWZnxD6n29IZgWp/view?usp=drive_link",
+    "https://drive.google.com/file/d/1dwaaqiGUk-Zm_nVJ6HItrKPuj1O3YoWs/view?usp=drive_link",
+    "https://drive.google.com/file/d/1u3a9diA-SrB-zzIxUA2qH7x69PrWpNYd/view?usp=drive_link",
+    "https://drive.google.com/file/d/1ggF7Q_tjotTzvFysGeZVWH1-j2o2LiK4/view?usp=drive_link",
+];
+
 const yearbeforeusButton = document.querySelector('#yearbeforeus');
 const year2015Button = document.querySelector('#year2015');
 const year2016Button = document.querySelector('#year2016');
