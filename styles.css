@@ -13,14 +13,15 @@ box-sizing: border-box;
 body {
     display: flex;
     flex-direction: column;
-    height: 96vh;
+    height: 100%;
 }
 
 main {
     display: flex;
     flex-direction: column;
     /* border: 2px solid orange; */
-    max-height: 94vh;
+    /* max-height: 94vh;
+    min-height: 94vh; */
 }
 
 footer {
@@ -32,7 +33,7 @@ footer {
     justify-content: center;
 }
 
-.background1 {
+/* .background1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: black;
     background-image: url('img/church1.jpg');
@@ -40,10 +41,21 @@ footer {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: bottom;
+} */
+
+.background2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    background-image: url('img/church2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
+
 .headercontainer {
-    background-color: rgba(255, 255, 255, 0.76);
+    background-color: rgb(255, 255, 255);
     width: fit-content;
     border: 2px solid transparent;
     display: flex;
@@ -60,15 +72,32 @@ footer {
 
 .photoscontainer {
     /* flex: 1; */
-    /* border: 2px solid red; */
+    border: 3px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-y: scroll;
+    overflow: scroll;
     margin: 0;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     box-shadow: 0 0 200px rgba(10, 71, 10, 0.5);
+    min-height: 82vh;
+    max-height: 82vh;
+
+}
+
+.photoscontainer::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .photoscontainer img {
@@ -77,8 +106,19 @@ footer {
     height: 300px;
     object-fit: cover;
     margin: 10px;
-
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
 }
+
+
+/* .photoscontainer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 5px;
+    opacity: 0; 
+    animation: fadeIn 2s ease-in-out forwards; 
+} */
 
 
 .photosbuttondiv {
@@ -87,6 +127,8 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .yearlistcontainer {
@@ -94,9 +136,10 @@ footer {
     flex-direction: crow;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid blue; */
     width: 100%;
     margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .hide {
@@ -122,12 +165,8 @@ button:focus {
     font-weight: 550;
 }
 
-button:active {
-    transform: translate(0, 0);
-    border-bottom: 2px solid rgb(50, 50, 50);
-}
-
 button:hover {
     transform: translate(0, -3px);
     border-bottom: 2px solid rgb(50, 50, 50);
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(7, 70, 7));
 }

@@ -51,18 +51,51 @@ const photosContainer = document.querySelector('#photoscontainer');
 const showAllYearButtons = () => {
     yearListContainer.classList.remove('hide');
     photosButton.classList.add('hide');
-
 };
 
 const hideYearsShowPhotosButton = () => {
     photosButton.classList.remove('hide');
     yearListContainer.classList.add('hide');
+    photosButton.style.opacity = '0';
+    photosButton.style.animation = 'fadeIn 1s ease-in-out forwards';
 };
 
-photosButton.addEventListener('click', showAllYearButtons);
 
-for (let button of allYearButtons) {
-    button.addEventListener('click', hideYearsShowPhotosButton)
+
+photosButton.addEventListener('click', showAllYearButtons);
+photosButton.addEventListener('click', () => { photosContainer.innerHTML = '' });
+photosButton.addEventListener('click', () => setBackgroundURL('church1'));
+yearbeforeusButton.addEventListener('click', hideYearsShowPhotosButton);
+yearbeforeusButton.addEventListener('click', () => insertPicsToContainer(beforeusPics));
+yearbeforeusButton.addEventListener('click', () => setBackgroundURL('church2'));
+year2015Button.addEventListener('click', hideYearsShowPhotosButton);
+year2015Button.addEventListener('click', () => insertPicsToContainer(year2015Pics));
+year2016Button.addEventListener('click', hideYearsShowPhotosButton);
+year2017Button.addEventListener('click', hideYearsShowPhotosButton);
+year2018Button.addEventListener('click', hideYearsShowPhotosButton);
+year2019Button.addEventListener('click', hideYearsShowPhotosButton);
+year2020Button.addEventListener('click', hideYearsShowPhotosButton);
+year2021Button.addEventListener('click', hideYearsShowPhotosButton);
+year2022Button.addEventListener('click', hideYearsShowPhotosButton);
+year2023Button.addEventListener('click', hideYearsShowPhotosButton);
+year2024Button.addEventListener('click', hideYearsShowPhotosButton);
+year2025Button.addEventListener('click', hideYearsShowPhotosButton);
+
+
+// for (let button of allYearButtons) {
+//     button.addEventListener('click', hideYearsShowPhotosButton)
+// };
+
+window.addEventListener('load', () => {
+    document.body.style.opacity = '1'; // Trigger the fade-in effect
+});
+
+const setBackgroundURL = (image) => {
+    const body = document.querySelector('body');
+    body.style.backgroundImage = '';
+    body.style.backgroundImage = `url(img/${image}.jpg)`;
+    body.style.opacity = '0';
+    body.style.animation = 'fadeIn 1s ease-in-out forwards';
 };
 
 const getFinalImageLinks = (initialLinks) => {
@@ -80,6 +113,7 @@ const insertPicsToContainer = (initialLinks) => {
         const imagePic = document.createElement('img');
         imagePic.src = finalImageLinks[i];
         photosContainer.appendChild(imagePic);
+        imagePic.style.animationDelay = `${i * 0.5}s`;
         // const imagePic = document.createElement('img');
         // const imageParagraph = document.createElement('p');
         // imagePic.src = finalImageLinks[i];
@@ -88,8 +122,23 @@ const insertPicsToContainer = (initialLinks) => {
         // imageDiv.appendChild(imageParagraph);
         // insidePhotosContainer.appendChild(imagePic);
         // imageDiv.classList.add('imageFigure');
+        // setTimeout(() => {
+        //     imagePic.style.opacity = '1';
+        // }, 10
     }
 };
 
-insertPicsToContainer(beforeusPics);
-// insertPicsToContainer(year2015Pics);
+// photosButton.addEventListener('click', () => { photosContainer.innerText += "Rara" });
+// Use an anonymous function to pass the parameter when the button is clicked
+//photosButton.addEventListener('click', () => insertPicsToContainer(beforeusImageLinks));
+
+
+
+// const removeAllChildren = () => {
+//     const parent = document.querySelector();
+//     parent..
+// }
+
+// const showPics = () => {
+//     photosButton.addEventListener('click', insertPicsToContainer(beforeusPics));
+// }
