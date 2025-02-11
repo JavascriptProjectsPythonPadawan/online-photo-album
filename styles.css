@@ -40,6 +40,19 @@ body {
     pointer-events: none;
 }
 
+.backbackgroundimage {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -50;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    pointer-events: none;
+    z-index: -99;
+    filter: blur(5px);
+}
+
 .backgroundpic {
     width: 100vw;
     height: 100vh;
@@ -215,8 +228,8 @@ button:hover {
         justify-content: center;
         overflow: scroll;
         margin: 0;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
         box-shadow: 0 0 200px rgba(10, 71, 10, 0.5);
         min-height: 60vh;
         max-height: 60vh;
@@ -279,5 +292,22 @@ button:hover {
         flex-direction: column;
     }
 
+
+    .backgroundpic {
+        height: 550px;
+        position: fixed;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -50;
+        object-fit: cover;
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out forwards;
+        pointer-events: none;
+    }
+
+    body {
+        background-color: black;
+    }
 
 }

@@ -64,6 +64,7 @@ const yearListContainer = document.querySelector('#yearlistcontainer');
 const allYearButtons = document.querySelectorAll('#yearlistcontainer button');
 const photosContainer = document.querySelector('#photoscontainer');
 const backgroundPic = document.querySelector('#backgroundpic');
+const backbackgroundPic = document.querySelector('#backbackgroundpic');
 const bodyOfDocument = document.querySelector('body');
 
 
@@ -89,6 +90,7 @@ const setBackgroundURL = (imageLink) => {
     const body = document.querySelector('body');
     body.style.backgroundImage = '';
     backgroundPic.src = imageLink;
+    backbackgroundPic.src = imageLink;
     backgroundPic.classList.remove('backgroundpic');
     backgroundPic.classList.remove('backgroundimage');
     backgroundPic.classList.add('backgroundpic');
